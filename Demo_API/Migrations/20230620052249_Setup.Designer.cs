@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Demo_API.Migrations
 {
-    [DbContext(typeof(LibraryContext))]
-    [Migration("20230619120427_Setup")]
+    [DbContext(typeof(ApplicationDbContext))]
+    [Migration("20230620052249_Setup")]
     partial class Setup
     {
         /// <inheritdoc />
@@ -40,6 +40,25 @@ namespace Demo_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("Demo_API.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

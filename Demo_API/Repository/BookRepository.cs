@@ -7,9 +7,9 @@ namespace Demo_API.Repository
 {
     public class BookRepository : IBookRepository
     {
-        private readonly LibraryContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public BookRepository(LibraryContext context)
+        public BookRepository(ApplicationDbContext context)
         {
             _context = context;
         }
