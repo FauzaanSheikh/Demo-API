@@ -1,6 +1,7 @@
 ﻿using System;
 using Demo_API.Interfaces;
 using Demo_API.Models;
+using Demo_API.Repository;
 
 namespace Demo_API.Services
 {

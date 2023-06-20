@@ -7,20 +7,9 @@ namespace Demo_API.Models
     public class Book
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Author { get; set; }
-        // Additional properties...
+        public string? Title { get; set; }
+        public string? Author { get; set; }
+        public DateOnly ReleaseDate { get; set; }
     }
-
-    public class LibraryContext : DbContext
-    {
-        public LibraryContext(DbContextOptions<LibraryContext> options)
-            : base(options)
-        {
-        }
-
-        public DbSet<Book> Books { get; set; }
-    }
-
 }
 
