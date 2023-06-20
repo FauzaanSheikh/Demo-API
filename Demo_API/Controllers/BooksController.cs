@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Demo_API.Interfaces;
 using Demo_API.Models;
 using Demo_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo_API.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/v1/[controller]")]
     public class BooksController : ControllerBase
     {

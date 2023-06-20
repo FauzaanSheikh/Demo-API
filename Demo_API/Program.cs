@@ -1,9 +1,12 @@
-﻿using Demo_API.Interfaces;
+﻿using System.Text;
+using Demo_API.Interfaces;
 using Demo_API.Models;
 using Demo_API.Repository;
 using Demo_API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +25,27 @@ builder.Services.AddSwaggerGen();
 //Add DI against Interfacs
 builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+// Add JWT Auth
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = false;
+    x.SaveToken = true;
+    byte[] key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("Secret"));
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false
+    };
+});
 
 
 var app = builder.Build();

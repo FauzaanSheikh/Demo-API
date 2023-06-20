@@ -1,26 +1,32 @@
 ﻿<Properties StartupConfiguration="{DF621C45-1EC9-4017-9E54-B0180C0A05EC}|Default">
-  <MonoDevelop.Ide.ItemProperties.Demo__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Demo_API/Models/Book.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Demo_API/Program.cs">
     <Files>
-      <File FileName="Demo_API/Controllers/BooksController.cs" Line="50" Column="38" />
+      <File FileName="Demo_API/Controllers/BooksController.cs" Line="13" Column="20" />
       <File FileName="Demo_API/Services/BookService.cs" Line="24" Column="46" />
       <File FileName="Demo_API/Repository/BookRepository.cs" Line="48" Column="6" />
-      <File FileName="Demo_API/Models/Book.cs" Line="16" Column="1" />
+      <File FileName="Demo_API/Interfaces/IUserService.cs" Line="11" Column="2" />
+      <File FileName="Demo_API/Controllers/UserController.cs" Line="46" Column="53" />
+      <File FileName="Demo_API/Services/UserService.cs" Line="27" Column="1" />
+      <File FileName="Demo_API/Program.cs" Line="45" Column="32" />
+      <File FileName="Demo_API/appsettings.json" Line="12" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Demo_API" expanded="True">
-            <Node name="Demo_API" expanded="True" />
+            <Node name="Demo_API" expanded="True">
+              <Node name="Repository" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Demo__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

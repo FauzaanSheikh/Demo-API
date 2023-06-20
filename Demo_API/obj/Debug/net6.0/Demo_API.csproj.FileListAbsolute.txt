@@ -48,6 +48,7 @@
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Demo_API.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Demo_API.pdb
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Humanizer.dll
+/Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
@@ -64,6 +65,8 @@
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.OpenApi.dll
 /Users/fauzaanhafeez/Desktop/src/Demo-API/Demo_API/bin/Debug/net6.0/Microsoft.Owin.dll
