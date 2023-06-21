@@ -33,7 +33,7 @@ namespace Demo_API.Services
             return user;
         }
 
-        public async Task<string> Authenticate(LoginModel model)
+        public async Task<LoginResponse> Authenticate(LoginModel model)
         {
             var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == model.Email);
 
@@ -56,7 +56,13 @@ namespace Demo_API.Services
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return tokenHandler.WriteToken(token);
+            string tokenString = tokenHandler.WriteToken(token);
+
+            LoginResponse response = new LoginResponse();
+            response.Email = user.Email;
+            response.Token = tokenString;
+
+            return response;
         }
     }
 

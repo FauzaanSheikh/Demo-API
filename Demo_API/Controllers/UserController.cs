@@ -43,10 +43,10 @@ namespace Demo_API.Controllers
         {
             try
             {
-                var token = await _userService.Authenticate(model);
+                LoginResponse response = await _userService.Authenticate(model);
 
-                if (!string.IsNullOrEmpty(token))
-                    return Ok(new { token });
+                if (!string.IsNullOrEmpty(response.Token))
+                    return Ok(new { response });
 
                 return BadRequest(new { message = "Email or password is incorrect" });
             }

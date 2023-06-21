@@ -47,6 +47,17 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
+// Adding CORS policy (allowing all origins for test env only)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "CORSPolicy",
+                      builder =>
+                      {
+                          builder.AllowAnyOrigin()
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod();
+                      });
+});
 
 var app = builder.Build();
 
@@ -74,5 +85,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("CORSPolicy");
 
 app.Run();

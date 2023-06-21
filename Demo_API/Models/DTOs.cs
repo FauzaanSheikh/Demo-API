@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Demo_API.Models
 {
@@ -31,6 +32,13 @@ namespace Demo_API.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+    }
+
+    public class LoginResponse
+    {
+        public string Email { get; set; }
+
+        public string Token { get; set; }
     }
 
 }
